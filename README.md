@@ -111,6 +111,8 @@ public class UserRepository {
 
 ```
 
+[برگشت به بالا](#جدول-محتوا)
+
 ## اصل دوم Open-Close Principle
 
 کامپوننت ها (کلاس، ماژول ها،متدها ) باید برای توسعه باز و برای تغییر بسته باشند.(اضافه کردن امکانات بدون تغییر در هسته ی اصلی کد)
@@ -177,6 +179,8 @@ public class DrawingApp {
     }
 }
 ```
+
+[برگشت به بالا](#جدول-محتوا)
 
 ## اصل سوم Liskov Substitution Principle
 
@@ -258,6 +262,7 @@ public interface Details2 {
 - اصل چهارم طراحی اینترفیس
 ---
 
+[برگشت به بالا](#جدول-محتوا)
 
 ## اصل چهارم Interface Segregation Principle
 
@@ -319,6 +324,8 @@ public class Birds implements Details2 {
     }
 }
 ```
+
+[برگشت به بالا](#جدول-محتوا)
 
 ## اصل پنجم Dependency Inversion Principle
 
@@ -427,3 +434,4 @@ public class Run {
 }
 
 ```
+[برگشت به بالا](#جدول-محتوا)
