@@ -346,8 +346,11 @@ class MysqlCRUD {
     
 }
 
+//اضافه کردن کد های مونگو دی بی 
+
 class User {
     public void addUser(){
+        //مجبور به تغییر در کد های زیر در هنگام اضافه شدن مونگو دی بی
         MysqlCRUD crud = new MysqlCRUD();
         crud.save("john");
     }
@@ -401,23 +404,25 @@ class MysqlCRUD implements DbAction{
 }
 
 class User {
-
+// استفاده از قرارداد(اینترفیس ) به جای استفاده مستقیم
     private DbAction dbAction;
 
     User (DbAction dbAction){
         this.dbAction = dbAction;
     }
-
-    public void addUser(){
-        dbAction.save("john");
+//حالا نوع دیتابیس(مونگو،مای اسکیوال) اهمیتی ندارد و فقط باید از اینترفیس ارث بری کرده باشد 
+// و متد های اینترفیس را پیاده سازی کرده باشد
+    public void addUser(String name){
+        dbAction.save(name);
     }
 }
 
 public class Run {
     public static void main(String[] args) {
+        String name = "john";
         DbAction dbAction = new MongoCRUD();
         User user = new User(dbAction);
-        user.addUser();
+        user.addUser(name);
     }
 }
 
