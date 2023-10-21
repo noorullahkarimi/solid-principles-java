@@ -184,6 +184,7 @@ public class DrawingApp {
 (حتی آرگومان های پاس داده شده و حتی نوع داده برگشت داده شده باید همانند باشند)
 
 در مثال آورده شده کلاس Birds به دلیل آنکه پرنده موتور ندارد نمیتوان متد motor پیاده سازی کرد.
+(چون پیاده سازی کامل رخ نداده پس نقض اصل سوم اتفاق افتاده)
 
 بد:
 ```java
@@ -212,7 +213,6 @@ public class Birds implements Details {
 }
 ```
 
-
 خوب:
 ```java
 public interface Details {
@@ -240,6 +240,24 @@ public class Birds implements Details2 {
     }
 }
 ```
+
+---
+
+پ.ن. شاید بپرسید چرا اینترفیس ها به این شکل نوشته نشده اند؟
+```java
+public interface Details {
+    void motor(int power);
+}
+
+public interface Details2 {
+    void fly();
+}
+```
+چون اصل سوم و چهارم خیلی به یک دیگر شبیه هستند و باهم استفاده می شوند مجبور شدیم مثال را به این شکل بنویسیم
+- اصل سوم پیاده سازی کامل اینترنفیس
+- اصل چهارم طراحی اینترفیس
+---
+
 
 ## اصل چهارم Interface Segregation Principle
 
