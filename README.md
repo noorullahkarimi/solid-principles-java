@@ -10,7 +10,7 @@
   - [اصول SOLID در یک نگاه](#اصول-SOLID-در-یک-نگاه)
   - [جدول محتوا](#جدول-محتوا)
   - [مقدمه](#مقدمه)
-  - [اصل اول (Single Responsibility Principle)(SRP)](#اصل-اول-(Single-Responsibility-Principle)(SRP))
+  - [اصل اول (Single Responsibility Principle)(SRP)](اصل-اول-(Single-Responsibility-Principle)(SRP))
   - [](#)
   - [](#)
   - [](#)
