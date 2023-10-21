@@ -7,29 +7,23 @@
 ## جدول محتوا
 
 
-- [کد نویسی تمیز در sql](#clean-code-sql)
-  - [جدول محتوا](#table-of-contents)
-  - [مقدمه](#introduction)
-  - [تورفتگی ها و فاصله ها](#indenting)
-  - [دستور Select](#select)
-  - [دستور Joins](#joins)
-  - [جداول](#tables)
-  - [ستون ها](#columns)
-  - [Procedures](#procedures)
-  - [Views](#views)
-  - [نظرات](#comments)
-  - [ماژولار کردن](#modularize)
-  - [جداول موقت ](#temporary-tables)
-  - [حلقه ی لوپ](#looping)
-  - [عیب یابی](#when-troubleshooting)
+  - [اصول SOLID در یک نگاه](#اصول-SOLID-در-یک-نگاه)
+  - [جدول محتوا](#جدول-محتوا)
+  - [مقدمه](#مقدمه)
+  - [اصل اول Single Responsibility Principle (SRP)](#اصل-اول-Single-Responsibility-Principle)
+  - [اصل دوم Open-Close Principle (OCP)](#اصل-دوم-Open-Close-Principle)
+  - [اصل سوم Liskov Substitution Principle (LSP)](#اصل-سوم-Liskov-Substitution-Principle)
+  - [اصل چهارم Interface Segregation Principle (ISP)](#اصل-چهارم-Interface-Segregation-Principle)
+  - [اصل پنجم Dependency Inversion Principle (DIP)](#اصل-پنجم-Dependency-Inversion-Principle)
 
 
 ## مقدمه
 
 در اکثر منابع یادگیری اصول SOLID همواره مباحث بصورت خیلی پیچیده نوشته شده است.
-در این داکیومنت تلاش ما بر این بوده است که با ارائه مثال های ساده فهم این اصول را برای فارسی زبانانی که در تلاشند تا مهارت های خود را افزایش دهند مفید باشد.
+در این داکیومنت تلاش ما بر این بوده است که با ارائه مثال های ساده فهم این اصول را برای تمامی فارسی زبانان مهیا کنیم.
 
-## اصل اول 
+
+## اصل اول Single Responsibility Principle
 
 کلاس ها و متد ها باید یک مسئولیت را دنبال کنند.
 در کد زیر شما یک مثال ساده از ذخیره ی کاربر در دیتابیس را مشاهده می کنید که اصل اول را نقض میکند.اما چرا؟
@@ -72,8 +66,10 @@ public class RegistrationService {
 خوب:
 
 ```java
-// وظیفه اول : ذخیره در دیتابیس
 public class RegistrationService {
+
+// وظیفه اول : ذخیره در دیتابیس
+
     private UserRepository userRepository;
 
     public RegistrationService() {
@@ -117,12 +113,12 @@ public class UserRepository {
 ```
 
 
-## اصل دوم 
+## اصل دوم Open-Close Principle
 
 کامپوننت ها (کلاس، ماژول ها،متدها ) باید برای توسعه باز و برای تغییر بسته باشند.(اضافه کردن امکانات بدون تغییر در هسته ی اصلی کد)
 
 در کد زیر اگر بخواهیم یک قسمت برای شکل شش ضلعی اضافه کنیم
-باید در کلاس shape تغییراتی ایجاد کنیم.(نقض اصل دوم سالید)
+باید در کلاس Shape تغییراتی ایجاد کنیم.(نقض اصل دوم سالید)
 
 
 بد:
@@ -181,7 +177,7 @@ public class DrawingApp {
 }
 ```
 
-## اصل سوم 
+## اصل سوم Liskov Substitution Principle
 
 تمامی کلاس هایی که از یک interface، implements می شوند، باید حتما تمامی متد های داخل آن را کامل پیاده سازی کنند.
 (حتی آرگومان های پاس داده شده و حتی نوع داده برگشت داده شده باید همانند باشند)
@@ -244,7 +240,7 @@ public class Birds implements Details2 {
 }
 ```
 
-## اصل چهارم 
+## اصل چهارم Interface Segregation Principle
 
 این اصل شباهت بسیار زیاد به اصل سوم دارد. با این تفاوت که اصل چهارم تمرکز روی طراحی interface ها دارد،
 اما اصل سوم روی کامل پیاده سازی شدن interface ها.
@@ -305,7 +301,7 @@ public class Birds implements Details2 {
 }
 ```
 
-## اصل پنجم
+## اصل پنجم Dependency Inversion Principle
 
 کلاس های ما نباید مستقیما به زیر کلاس ها وابستگی داشته باشند، به جای آن باید به abstractions(interface) ها وابستگی داشته باشند.
 
