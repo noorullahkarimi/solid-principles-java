@@ -10,11 +10,13 @@
   - [اصول SOLID در یک نگاه](#اصول-SOLID-در-یک-نگاه)
   - [جدول محتوا](#جدول-محتوا)
   - [مقدمه](#مقدمه)
+<<<<<<< HEAD
   - [اصل اول Single Responsibility Principle (SRP)](#اصل-اول-Single-Responsibility-Principle)
   - [اصل دوم Open-Close Principle (OCP)](#اصل-دوم-Open-Close-Principle)
   - [اصل سوم Liskov Substitution Principle (LSP)](#اصل-سوم-Liskov-Substitution-Principle)
   - [اصل چهارم Interface Segregation Principle (ISP)](#اصل-چهارم-Interface-Segregation-Principle)
   - [اصل پنجم Dependency Inversion Principle (DIP)](#اصل-پنجم-Dependency-Inversion-Principle)
+>>>>>>> 18db2263882fe3bae60dbbc651fbe1376290507e
 
 
 ## مقدمه
@@ -23,7 +25,9 @@
 در این داکیومنت تلاش ما بر این بوده است که با ارائه مثال های ساده فهم این اصول را برای تمامی فارسی زبانان مهیا کنیم.
 
 
+<<<<<<< HEAD
 ## اصل اول Single Responsibility Principle
+>>>>>>> 18db2263882fe3bae60dbbc651fbe1376290507e
 
 کلاس ها و متد ها باید یک مسئولیت را دنبال کنند.
 در کد زیر شما یک مثال ساده از ذخیره ی کاربر در دیتابیس را مشاهده می کنید که اصل اول را نقض میکند.اما چرا؟
@@ -113,7 +117,9 @@ public class UserRepository {
 ```
 
 
+<<<<<<< HEAD
 ## اصل دوم Open-Close Principle
+>>>>>>> 18db2263882fe3bae60dbbc651fbe1376290507e
 
 کامپوننت ها (کلاس، ماژول ها،متدها ) باید برای توسعه باز و برای تغییر بسته باشند.(اضافه کردن امکانات بدون تغییر در هسته ی اصلی کد)
 
@@ -177,7 +183,9 @@ public class DrawingApp {
 }
 ```
 
+<<<<<<< HEAD
 ## اصل سوم Liskov Substitution Principle
+>>>>>>> 18db2263882fe3bae60dbbc651fbe1376290507e
 
 تمامی کلاس هایی که از یک interface، implements می شوند، باید حتما تمامی متد های داخل آن را کامل پیاده سازی کنند.
 (حتی آرگومان های پاس داده شده و حتی نوع داده برگشت داده شده باید همانند باشند)
@@ -240,7 +248,9 @@ public class Birds implements Details2 {
 }
 ```
 
+<<<<<<< HEAD
 ## اصل چهارم Interface Segregation Principle
+>>>>>>> 18db2263882fe3bae60dbbc651fbe1376290507e
 
 این اصل شباهت بسیار زیاد به اصل سوم دارد. با این تفاوت که اصل چهارم تمرکز روی طراحی interface ها دارد،
 اما اصل سوم روی کامل پیاده سازی شدن interface ها.
@@ -301,7 +311,9 @@ public class Birds implements Details2 {
 }
 ```
 
+<<<<<<< HEAD
 ## اصل پنجم Dependency Inversion Principle
+>>>>>>> 18db2263882fe3bae60dbbc651fbe1376290507e
 
 کلاس های ما نباید مستقیما به زیر کلاس ها وابستگی داشته باشند، به جای آن باید به abstractions(interface) ها وابستگی داشته باشند.
 
