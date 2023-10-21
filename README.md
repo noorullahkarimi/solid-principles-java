@@ -72,7 +72,6 @@ public class RegistrationService {
 خوب:
 
 ```java
-// وظیفه اول : ذخیره در دیتابیس
 public class RegistrationService {
     private UserRepository userRepository;
 
